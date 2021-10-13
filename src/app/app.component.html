@@ -12,7 +12,7 @@
     </div>
   </div>
 
-  <h1>{{findIsland}}</h1>
+  <h1>Islands: {{findIsland}}</h1>
 
   <div class="matrix__add-new">
     <div class="matrix__select-blocks">
@@ -31,14 +31,17 @@
   
     <div class="matrix__new-block" *ngIf="newMatrixArrayIds.length">
       <div class="matrix__block" *ngFor="let rowId of newMatrixArrayIds">
-        <input
-          class="matrix__input"
-          type="text"
+        <div
+          [ngClass]="{
+            'matrix__change-num': true,
+            'zero': getNewTimeMatrixNum(rowId, numId) === 0,
+            'one': getNewTimeMatrixNum(rowId, numId) === 1
+          }"
           *ngFor="let numId of newMatrixRowIds"
-          (input)="changeNewTimeMatrixNum(rowId, numId, $event)"
-          [value]="getNewTimeMatrixNum(rowId, numId) !== 0 ? 1 : 0"
-          maxlength="1"
+          (click)="changeNewTimeMatrixNum(rowId, numId)"
         >
+          {{getNewTimeMatrixNum(rowId, numId)}}
+        </div>
       </div>
   
       <div class="matrix__button" (click)="createNewMatrixArray()">Create new matrix</div>

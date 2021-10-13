@@ -110,11 +110,13 @@
     gap: 10px;
   }
 
-  &__input {
+  &__change-num {
     width: 20px;
     height: 20px;
 
+    cursor: pointer;
     text-align: center;
+    border: 1px solid #000;
   }
 
   &__input::-webkit-outer-spin-button,

@@ -112,16 +112,12 @@ export class AppComponent implements OnInit {
     }
   }
 
-  public changeNewTimeMatrixNum(rowId: number, numId: number, event: Event): void {
-    let number;
-
-    if (+(<HTMLInputElement>event.target).value !== 0) {
-      number = 1;
+  public changeNewTimeMatrixNum(rowId: number, numId: number): void {
+    if (this.newMatrixArray[rowId][numId] === 0) {
+      this.newMatrixArray[rowId][numId] = 1;
     } else {
-      number = 0;
+      this.newMatrixArray[rowId][numId] = 0;
     }
-
-    this.newMatrixArray[rowId][numId] = number;
   }
 
   public getNewTimeMatrixNum(rowId: number, numId: number): number {
