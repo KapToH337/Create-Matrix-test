@@ -1,0 +1,125 @@
+.matrix {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  &__block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 20px;
+    height: 20px;
+
+    border: 1px solid #000;
+    color: #000;
+  }
+
+  .zero {
+    background-color: #646464;
+  }
+
+  .one {
+    background-color: green;
+  }
+
+  &__add-new {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+
+    gap: 25px;
+  }
+
+  &__select-blocks {
+    padding: 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #646464;
+    border: 1px solid #fff;
+    box-shadow: 0 0 1px 5px #646464;
+    border-radius: 15px;
+
+    gap: 15px;
+  }
+
+  &__select-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+  }
+
+  &__paragraph {
+    color: #fff;
+  }
+
+  &__select {
+    width: 50px;
+  }
+
+  &__button {
+    width: 150px;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    color: #fff;
+    background-color: #000;
+    border-radius: 15px;
+
+    transition: .5s;
+  }
+
+  &__button:hover {
+    background-color: #646464;;
+    color: #fff;
+  }
+
+  &__new-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+  }
+
+  &__input {
+    width: 20px;
+    height: 20px;
+
+    text-align: center;
+  }
+
+  &__input::-webkit-outer-spin-button,
+  &__input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+}
